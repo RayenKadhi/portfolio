@@ -1,0 +1,163 @@
+.navigation-bar{
+    background-color: rgb(0, 0, 0);
+    height: 50px;
+    display:flex;
+    justify-content: center;
+}
+
+.nav-link{
+    color:rgb(250, 252, 253);
+
+    padding: 1em;
+}
+
+.hero{
+    background-color: black;
+    height: 60vh;
+    width: 100%;
+}
+
+#profile_pic{
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+}
+
+.hero--content{
+    width:800px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+
+.hero--content--intro{
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+
+
+.intro-name{
+    font-size:50px;
+}
+
+
+.title{
+    color:aliceblue;
+    display: flex;
+    font-size:35px;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+
+.title2{
+    color:aliceblue;
+    display: flex;
+    font-size:20px;
+    justify-content: center;
+    padding: 0.5em;
+    font-weight: 300;
+}
+
+
+#image1{
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+}
+
+
+#image2{
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+}
+
+#image3{
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.container{
+    background-color: #DCDCDC;
+    height: 60vh;
+    width: 100%;
+    padding: 2em;
+    justify-content: center;
+}
+
+
+.txt{
+    color:rgb(0, 0, 0);
+    display: flex;
+    font-size:20px;
+    justify-content: left;
+    padding: 0.5em;
+    font-weight: 800;
+}
+.txt1{
+    color:rgb(0, 0, 0);
+    display: flex;
+    font-size:20px;
+    justify-content: left;
+    padding: 0.5em;
+    font-weight: 300;
+}
+.txt2{
+    color:rgb(0, 0, 0);
+    display: flex;
+    font-size:20px;
+    justify-content: safe_center;
+    padding: 0.5em;
+    font-weight: 800;
+}
+.txt3{
+    color:rgb(0, 0, 0);
+    display: flex;
+    font-size:20px;
+    justify-content: safe_center;
+    padding: 0.5em;
+    font-weight: 300;
+}
+.txt4{
+    color:rgb(0, 0, 0);
+    display: flex;
+    font-size:20px;
+    justify-content: safe_center;
+    padding: 0.5em;
+    font-weight: 800;
+}
+.txt5{
+    color:rgb(0, 0, 0);
+    display: flex;
+    font-size:20px;
+    justify-content:safe_center;
+    padding: 0.5em;
+    font-weight: 300;
+}
+.projects{
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+}
+.texts{
+    padding: 3em;
+}
+
+
+.project--body{
+    font-size: 20px;
+}
+.project--image{
+    max-width: 800px;
+    max-height: 60vh;
+}
+

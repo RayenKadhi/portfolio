@@ -1,0 +1,31 @@
+{% extends 'base/main.html' %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+<div class ='container'>
+    <h3> Project_form </h3>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        {{form.media}}
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">{{field.label}}</label>
+                    {{field}}
+            </div>
+        {% endfor %}
+
+        <input class='btn btn-primary' type="submit" value="submit">
+
+    </form>
+
+
+
+</div>
+{% endblock content %}

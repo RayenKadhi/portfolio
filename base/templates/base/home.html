@@ -1,0 +1,133 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="hero">
+    <div class="hero--content">
+        <div class="hero--content--intro">
+            <img id="profile_pic" src="{% static 'images/rayen.jpg' %}">
+            <h1 class="intro--name">Mohamed <br>Rayen <br> Kadhi</h1>
+        </div>
+
+        <div class="hero--content--subheadline">
+
+            <h3 class="description"> Topography and Geomatic Engineer</h3>
+            <p class="slogan">I also like programming languages </p>
+        </div>
+    </div>
+
+</section>
+
+<section class="container section--2">
+        <h5 class="txtt"> &hearts; Projects that make my journey worthwhile.. &hearts; </h5>
+
+    <div class="title1">
+        <h5 class="styling"> &bull; About Topography and Geomatic: </h5>
+        <div class="projects--wrapper">
+            {% for project in projects %}
+                <div class="project--column">
+                    <a href="{% url 'project' project.id %}">
+                        <img class="project--thumbnail" src="{{project.thumbnail.url}}">
+                    </a>
+                <div class="project--body">
+                    <h5>{{project.title}}</h5>
+                </div>
+            </div>
+            {% empty %}
+
+            <h3>There are no projects in the database...</h3>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="title2">
+        <h5 class="styling"> &bull; About programming languages: </h5>
+
+
+    <div class="projects--wrapper">
+
+        {% for project in project1 %}
+        <div class="project--column">
+            <a href="{% url 'project1' project.id %}">
+                <img class="project--thumbnail" src="{{project.thumbnail.url}}">
+            </a>
+            <div class="project--body">
+                <h5>{{project.title}}</h5>
+            </div>
+        </div>
+        {% empty %}
+
+        <h3>There are no projects in the database...</h3>
+        {% endfor %}
+    </div>
+    </div>
+
+
+        <div class="about--wrapper">
+            <h3 class="MoreTitle">More About Me</h3>
+
+            <p class="MoreAboutME"> National Engineer in Topography and Geomatics graduated the school of engineers of Medjez El Beb, Tunisia.
+            Thus, I have varied knowledge on classical topography and more on the field geomatics, remote sensing and photogrammetry,
+            apart from the knowledge in the field of programming.
+            I want to put my skills, my desire to learn and my creativity at your services.</p>
+
+        </div>
+
+</section>
+
+<section class="section--1">
+    <div class="skills--container">
+        <h3 class="MoreTitle1">&bull; Skills</h3>
+        {% for skills in skills %}
+            {% if not skills.body == '' %}
+                <div class="skill--wrapper">
+                <div class="Skill-content">
+                    <img class="skill-image" src="{{skills.thumbnail}}">
+                    <div>
+                        <h5>{{skills.title}}</h5>
+                        <p>{{skills.body}}</p>
+                    </div>
+                </div>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+
+        <h3 class="MoreTitle2">&bull; Other Skills</h3>
+        <div class="other--skills--wrapper">
+            {% for skills in skills %}
+                {% if skills.body == '' %}
+                    <div class="skill--tag">
+                        <span>{{skills.title}}</span>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+</section>
+
+
+<section class="section--2">
+    <div class="skills--container">
+        <h3 class="FeedBack">&hearts; Add a feedback!&hearts; </h3>
+        <a class="btn btn-primary my-3" href="{% url 'add-endorsement' %}"> Here!</a>
+
+        {% for i in endorsement %}
+        <div style="margin-bottom: 1em;" class="card">
+            <div class="card-body">
+                <h5>{{i.name}}</h5>
+                <p>{{i.body}}</p>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+
+</section>
+
+
+{% endblock content %}
+
