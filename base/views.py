@@ -140,5 +140,5 @@ def contactMe(request):
             messages.success(request, 'Your message was successfully sent!')
             return redirect('home')
     context={'form':form}
-    return render(request,'base/contact_form.html', context)
+    return render(request,'base/Contact_form.html', context)
 
