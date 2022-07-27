@@ -9,7 +9,7 @@ body{
     padding-top: 2em;
     padding-bottom: 2em;
     margin: 0 auto;
-    min-width:170vh;
+    max-width:100%;
 
 }
 
@@ -29,7 +29,6 @@ body{
     justify-content: center;
     align-items: center;
     gap: 4em;
-    min-width:170vh;
 }
 
 
@@ -48,8 +47,8 @@ body{
 }
 
 #profile_pic{
-    height: 200px;
-    width: 200px;
+    max-height: 200px;
+    max-width: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -187,7 +186,6 @@ body{
 
 .contact--form{
     display: block;
-    min-width: 160vh;
     margin: 0 auto;
 
 }
@@ -253,7 +251,6 @@ body{
 }
 
 .title{
-    min-width: 170vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,5 +318,6 @@ body{
 .ProjectTitle{
     gap:2em;
 }
-.section{
+.container{
+    padding:0 0em;
 }
