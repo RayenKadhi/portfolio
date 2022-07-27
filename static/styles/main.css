@@ -10,6 +10,8 @@ body{
     padding-bottom: 2em;
     margin: 0 auto;
     max-width:100%;
+    max-height:100%;
+    padding: 2em 2em;
 
 }
 
@@ -17,7 +19,8 @@ body{
     background-color: #E5E5E5;
     padding-top: 2em;
     padding-bottom: 2em;
-    min-width:170vh;
+    max-width:100%;
+    max-height:100%;
 
 
 }
@@ -40,21 +43,22 @@ body{
 
 .hero{
     background-color: #1F2428;
-    min-height: 70vh;
+    max-height:100%;
     color: #fff;
-    min-width: 170vh;
+    min-width:100%;
 
 }
 
 #profile_pic{
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 50%;
+    max-width: 50%;
     object-fit: cover;
     border-radius: 50%;
 }
 
 .hero--content{
-    width: 800px;
+    max-width: 100%;
+   max-height:100%;
     margin: 0 auto;
     padding: 3em;
 }
@@ -66,25 +70,28 @@ body{
     align-items: center;
     gap: 2em;
     margin-bottom: 3em;
+    max-height:100%;
+    max-width:100%;
 }
 
 .intro--name{
-    font-size: 80px;
+    font-size: 2em;
     letter-spacing: .1em;
     font-weight: 700;
     line-height: .9em;
     font-family: 'Times New Roman';
 
+
 }
 
 .description{
-    font-size: 65px;
+    font-size: 2em;
     text-align: center;
     font-family:'Times New Roman';
 }
 
 .slogan{
-    font-size: 24px;
+    font-size: 1em;
     text-align: center;
     font-family:'Times New Roman';
 
@@ -187,6 +194,7 @@ body{
 .contact--form{
     display: block;
     margin: 0 auto;
+    padding: 2em 2em;
 
 }
 
@@ -279,6 +287,7 @@ body{
     text-indent:2em;
     font-family: 'Times New Roman';
     font-weight: bold;
+    padding: 2em 2em;
 }
 .MoreTitle{
     font-family: 'Times New Roman';
@@ -291,7 +300,8 @@ body{
     font-size: 40px;
     gap: 4em;
     font-weight: bold;
-    text-indent: 4em;
+    padding: 2em 2em;
+    align-items:center;
 }
 .MoreTitle1{
     font-family: 'Times New Roman';
@@ -312,7 +322,6 @@ body{
 .FeedBack{
     font-family: 'Times New Roman';
     font-weight: bold;
-    text-indent: 6em;
 
 }
 .ProjectTitle{
@@ -320,4 +329,10 @@ body{
 }
 .container{
     padding:0 0em;
+    max-height:100%;
+    max-width:100%;
+}
+.all{
+    max-height:100%;
+    max-width:100%;
 }
