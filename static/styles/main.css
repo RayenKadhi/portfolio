@@ -179,46 +179,6 @@ body{
     margin: 0 auto;
 }
 
-@media (min-width:40px){
-    .hero--content--intro{
-        flex-direction: column;
-    }
-
-    .projects--wrapper{
-
-        grid-template-columns: 1fr ;
-
-
-    }
-}
-
-@media (min-width:40px){
-    .hero--content{
-        width: 100%;
-    }
-}
-
-
-
-
-@media (min-width:40px){
-
-    .skills--container{
-        width: 100%;
-    }
-
-
-}
-
-
-@media (min-width:40px){
-
-
-    .skill--wrapper{
-        flex-flow: column;
-
-    }
-}
 
 .Skill-content{
     display: flex;
