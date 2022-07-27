@@ -22,7 +22,7 @@ geopy==2.2.0
 idna==2.10
 Jinja2==3.0.1
 Kivy==2.0.0
-kivy-deps.angle==0.3.0
+kivy-deps.angle==0.3.2
 kivy-deps.glew==0.3.0
 kivy-deps.sdl2==0.3.1
 Kivy-Garden==0.1.4
