@@ -179,7 +179,7 @@ body{
     margin: 0 auto;
 }
 
-@media (max-width:900px){
+@media (min-width:40px){
     .hero--content--intro{
         flex-direction: column;
     }
@@ -192,7 +192,7 @@ body{
     }
 }
 
-@media (max-width:800px){
+@media (min-width:40px){
     .hero--content{
         width: 100%;
     }
@@ -201,7 +201,7 @@ body{
 
 
 
-@media (max-width:600px){
+@media (min-width:40px){
 
     .skills--container{
         width: 100%;
@@ -211,7 +211,7 @@ body{
 }
 
 
-@media (max-width:400px){
+@media (min-width:40px){
 
 
     .skill--wrapper{
@@ -226,9 +226,6 @@ body{
     align-items: center;
 
 
-}
-header{
-    min-height:300px;
 }
 
 
