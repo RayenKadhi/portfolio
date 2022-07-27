@@ -1,5 +1,6 @@
 body{
     background-color: #E5E5E5;
+
 }
 
 .section--1{
@@ -8,12 +9,16 @@ body{
     padding-top: 2em;
     padding-bottom: 2em;
     margin: 0 auto;
+    min-width:170vh;
+
 }
 
 .section--2{
     background-color: #E5E5E5;
     padding-top: 2em;
     padding-bottom: 2em;
+    min-width:170vh;
+
 
 }
 
@@ -24,7 +29,9 @@ body{
     justify-content: center;
     align-items: center;
     gap: 4em;
+    min-width:170vh;
 }
+
 
 .nav-link{
     color: #fff;
@@ -36,6 +43,7 @@ body{
     background-color: #1F2428;
     min-height: 70vh;
     color: #fff;
+    min-width: 170vh;
 
 }
 
@@ -135,10 +143,12 @@ body{
 
 
 .skills--container{
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 1em;
     margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
 }
 
 .skill--wrapper{
@@ -177,8 +187,9 @@ body{
 
 .contact--form{
     display: block;
-    max-width: 600px;
+    min-width: 160vh;
     margin: 0 auto;
+
 }
 
 
@@ -242,7 +253,7 @@ body{
 }
 
 .title{
-    height: 50px;
+    min-width: 170vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,4 +320,6 @@ body{
 }
 .ProjectTitle{
     gap:2em;
+}
+.section{
 }
