@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Project, Skill, Message, Endorsement, ProjectLanguage, FilesAdmin
+from .models import Project, Skill, Message, Endorsement, ProjectLanguage
 from .form import ProjectForm, MessageForm, SkillForm, EndorsementForm, CommentForm, CommentForm1
 from django.contrib import messages
 from django.http import HttpResponse
@@ -25,8 +25,6 @@ def projectPage(request, pk):
     project = Project.objects.get(id=pk)
     counts = project.comment_set.count()
     comments = project.comment_set.all().order_by('-created')
-    file= FilesAdmin.objects.all()
-
     form = CommentForm()
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -35,7 +33,7 @@ def projectPage(request, pk):
             comment.project = project
             form.save()
             messages.success(request, 'Your comment was successfully sent!')
-    context = {'project': project, 'counts': counts, 'comments': comments, 'form': form, 'file':file}
+    context = {'project': project, 'counts': counts, 'comments': comments, 'form': form}
     return render(request, 'base/project.html', context)
 
 

@@ -8,6 +8,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Project(models.Model):
     title = models.CharField(max_length=200)
     thumbnail = models.ImageField(null=True)
+    adminupload =models.FileField(upload_to='media')
     body = RichTextUploadingField()
     slug = models.SlugField(null=True, blank=True)
     created = models.TimeField(auto_now_add=True)
@@ -62,6 +63,7 @@ class Endorsement(models.Model):
 
 class ProjectLanguage(models.Model):
     title = models.CharField(max_length=200)
+    adminupload =models.FileField(upload_to='media')
     thumbnail = models.ImageField(null=True)
     body = RichTextUploadingField()
     slug = models.SlugField(null=True, blank=True)
@@ -92,9 +94,4 @@ class Comment1(models.Model):
         return self.body[0:50]
 
 
-class FilesAdmin(models.Model):
-    adminupload=models.FileField(upload_to='media')
-    title=models.CharField(max_length=50)
 
-    def __str__(self):
-        return self.title

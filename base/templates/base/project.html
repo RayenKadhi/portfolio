@@ -14,11 +14,8 @@
 <div class="container">
     <div class="project-container">
         <img class="project--image" src="{{project.thumbnail.url}}">
-        {% for file in file  %}
-            <h2> {{file.title}}</h2>
-            <a href="{{file.adminupload.url}}" download="{{file.adminupload.url}}"> Download</a>
+            <a class= "btn btn-primary b1" href="{{project.adminupload.url}}" download="{{project.adminupload.url}}"> Download PDF</a>
         <h1>{{project.title}}</h1>
-        {% endfor %}
 
                 {% if request.user.is_authenticated %}
 

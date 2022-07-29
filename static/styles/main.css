@@ -186,7 +186,7 @@ body{
 .project--image{
     max-width: 50%;
     max-height: 50%;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     margin-left: 5em;
 
 }
@@ -290,4 +290,12 @@ body{
 .all{
     max-height:100%;
     max-width:100%;
+}
+
+.b1 {
+    background-color: blue;
+    max-height:20%;
+    max-width:40%;
+    margin-left: 7em;
+
 }

@@ -16,6 +16,7 @@
 
 
         <img class="project--image" src="{{project1.thumbnail.url}}">
+        <a class="btn btn-primary" href="{{project1.adminupload.url}}" download="{{project1.adminupload.url}}"> Download PDF </a>
 
         <h1>{{project1.title}}</h1>
         {% if request.user.is_authenticated %}
