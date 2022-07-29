@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Project, Skill, Message, Endorsement, ProjectLanguage
 from .form import ProjectForm, MessageForm, SkillForm, EndorsementForm, CommentForm, CommentForm1
 from django.contrib import messages
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.conf import settings
 import os
 from django.views.generic import TemplateView
@@ -152,5 +152,6 @@ def download(request, path):
             response=HttpResponse(fh.read(), content_type="application/adminupload")
             response['Content-Disposition'] ='inline;filename='+os.path.basename(file_path)
             return response
+    raise Http404
 
 
