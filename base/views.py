@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
-from .models import Project, Skill, Message, Endorsement, ProjectLanguage
+from .models import Project, Skill, Message, Endorsement, ProjectLanguage, FilesAdmin
 from .form import ProjectForm, MessageForm, SkillForm, EndorsementForm, CommentForm, CommentForm1
 from django.contrib import messages
+from django.http import HttpResponse
+from django.conf import settings
+import os
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -22,6 +25,7 @@ def projectPage(request, pk):
     project = Project.objects.get(id=pk)
     counts = project.comment_set.count()
     comments = project.comment_set.all().order_by('-created')
+    file= FilesAdmin.objects.all()
 
     form = CommentForm()
     if request.method == 'POST':
@@ -31,7 +35,7 @@ def projectPage(request, pk):
             comment.project = project
             form.save()
             messages.success(request, 'Your comment was successfully sent!')
-    context = {'project': project, 'counts': counts, 'comments': comments, 'form': form}
+    context = {'project': project, 'counts': counts, 'comments': comments, 'form': form, 'file':file}
     return render(request, 'base/project.html', context)
 
 
@@ -141,4 +145,14 @@ def contactMe(request):
             return redirect('home')
     context={'form':form}
     return render(request,'base/Contact_form.html', context)
+
+
+def download(request, path):
+    file_path=os.path.join(settings.MEDIA_ROOT,path)
+    if os.path.exists(file_path):
+        with open(file_path,'rb') as fh:
+            response=HttpResponse(fh.read(), content_type="application/adminupload")
+            response['Content-Disposition']='inline;filename='+os.path.basename(file_path)
+            return response
+    raise Http404
 
