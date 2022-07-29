@@ -81,7 +81,7 @@ def messagePage(request, pk):
 def addSkill(request):
     form = SkillForm()
     if request.method == 'POST':
-        form = SkillForm(request.POST)
+        form = SkillForm(request.POST, request.FILES)
         form.save()
         messages.success(request, 'Your skill was successfully added')
         return redirect('home')
