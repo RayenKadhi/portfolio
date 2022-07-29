@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)()th+eyop8axm&&#)kj$@bv%%iv2v6u6164^pn-sjia)hn2$i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =['portfolio-rayen.herokuapp.com',]
+ALLOWED_HOSTS =['portfolio-rayen.herokuapp.com']
 
 
 # Application definition
@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -121,11 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'static'),
 ]
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 
 
