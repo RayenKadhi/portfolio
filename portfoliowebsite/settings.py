@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)()th+eyop8axm&&#)kj$@bv%%iv2v6u6164^pn-sjia)hn2$i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =['portfolio-rayen.herokuapp.com']
+ALLOWED_HOSTS =[]
 
 
 # Application definition
@@ -126,8 +126,8 @@ STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'static'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/images')
-MEDIA_URL = 'static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/images')
 
 
 
