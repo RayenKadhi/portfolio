@@ -5,8 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponse, Http404
 from django.conf import settings
 import os
-from django.views.generic import TemplateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 
 # Create your views here.
@@ -15,7 +14,7 @@ def homePage(request):
     project1 = ProjectLanguage.objects.all()
     skills = Skill.objects.all()
     endorsement = Endorsement.objects.filter(approved=True)
-    context = {'projects': projects, 'skills': skills ,'endorsement': endorsement, 'project1': project1
+    context = {'projects': projects, 'skills': skills, 'endorsement': endorsement, 'project1': project1
 
                }
     return render(request, 'base/home.html', context)
@@ -119,6 +118,7 @@ def projectPage1(request, pk):
     context = {'project1': project1, 'counts': counts, 'comments': comments, 'form': form}
     return render(request, 'base/project1.html', context)
 
+
 def editProject1(request, pk):
     project = ProjectLanguage.objects.get(id=pk)
     form = ProjectForm(instance=project)
@@ -141,17 +141,15 @@ def contactMe(request):
             form.save()
             messages.success(request, 'Your message was successfully sent!')
             return redirect('home')
-    context={'form':form}
-    return render(request,'base/Contact_form.html', context)
+    context = {'form': form}
+    return render(request, 'base/Contact_form.html', context)
 
 
 def download(request, path):
-    file_path=os.path.join(settings.MEDIA_ROOT,path)
+    file_path = os.path.join(settings.MEDIA_ROOT, path)
     if os.path.exists(file_path):
-        with open(file_path,'rb') as fh:
-            response=HttpResponse(fh.read(), content_type="application/adminupload")
-            response['Content-Disposition'] ='inline;filename='+os.path.basename(file_path)
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/adminupload")
+            response['Content-Disposition'] = 'inline;filename=' + os.path.basename(file_path)
             return response
     raise Http404
-
-
